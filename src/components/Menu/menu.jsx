@@ -3,10 +3,10 @@ export const Menu = () => {
     <section>
       <ul>
         <li>
-          <a href="">Home</a>
+          <a href="./">Home</a>
         </li>
         <li>
-          <a href="">Movies</a>
+          <a href="./">Movies</a>
         </li>
       </ul>
     </section>
