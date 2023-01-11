@@ -15,7 +15,7 @@ export default function HomePage() {
 
   return (
     <>
-      <div>HomePage</div>
+      <h1>HomePage</h1>
       <ul>
         {movies.map(movie => (
           <li key={movie.id}>

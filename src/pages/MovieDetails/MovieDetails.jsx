@@ -10,7 +10,6 @@ import { getMovieDetails } from '../../service/fetchMovies';
 
 export default function MovieDetails() {
   const location = useLocation();
-  // console.log(location.state);
   const [movieDetails, setMovieDetails] = useState({});
   const { movieId } = useParams();
 
@@ -18,7 +17,6 @@ export default function MovieDetails() {
     getMovieDetails(movieId)
       .then(res => {
         setMovieDetails(res);
-        console.log(res);
       })
       .catch(err => console.log(err));
   }, [movieId]);

@@ -5,12 +5,11 @@ import { getMovieReview } from '../../service/fetchMovies';
 export const Reviews = () => {
   const { movieId } = useParams();
   const [movieReview, setMovieReview] = useState([]);
-  console.log(movieReview);
+
   useEffect(() => {
     getMovieReview(movieId)
       .then(res => {
         setMovieReview(res);
-        console.log(res);
       })
       .catch(err => console.log(err));
   }, [movieId]);
