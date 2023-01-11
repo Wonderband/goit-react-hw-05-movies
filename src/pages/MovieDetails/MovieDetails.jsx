@@ -21,7 +21,7 @@ export const MovieDetails = () => {
         console.log(res);
       })
       .catch(err => console.log(err));
-  }, []);
+  }, [movieId]);
   return (
     <>
       <h1>Movie Details</h1>
