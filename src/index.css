@@ -22,4 +22,19 @@ nav {
   border: 1px solid black;
 }
 
+.active{
+  font-weight: bold;
+  color:brown;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+
+
 

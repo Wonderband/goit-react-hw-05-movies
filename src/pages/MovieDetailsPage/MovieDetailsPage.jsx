@@ -7,8 +7,9 @@ import {
   useParams,
 } from 'react-router-dom';
 import { getMovieDetails } from '../../service/fetchMovies';
+import css from './MovieDetailsPage.module.css';
 
-export default function MovieDetails() {
+export default function MovieDetailsPage() {
   const location = useLocation();
   const [movieDetails, setMovieDetails] = useState({});
   const { movieId } = useParams();
@@ -36,7 +37,7 @@ export default function MovieDetails() {
       <h2>Genres</h2>
       <p>{movieDetails.genres?.map(genre => genre.name + ' ')}</p>
       <h2>Additional Info</h2>
-      <nav>
+      <nav className={css.detailsNav}>
         <NavLink to="cast" state={{ from: location.state?.from ?? '/movies' }}>
           Cast
         </NavLink>
