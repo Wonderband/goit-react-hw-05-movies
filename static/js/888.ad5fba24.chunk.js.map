@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/888.ad5fba24.chunk.js","mappings":"gMAAe,SAASA,IACtB,OAAO,mCACR,C","sources":["pages/Page404/Page404.jsx"],"sourcesContent":["export default function Page404() {\n  return <h1>Page404</h1>;\n}\n"],"names":["Page404"],"sourceRoot":""}
