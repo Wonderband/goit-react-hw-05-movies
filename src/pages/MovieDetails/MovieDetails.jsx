@@ -25,7 +25,7 @@ export const MovieDetails = () => {
   return (
     <>
       <h1>Movie Details</h1>
-      <Link to={location.state.from}>Back to movies</Link>
+      <Link to={location.state?.from ?? '/'}>Back to movies</Link>
       <br />
       <img
         src={'https://image.tmdb.org/t/p/w500/' + movieDetails.poster_path}
@@ -39,10 +39,10 @@ export const MovieDetails = () => {
       <p>{movieDetails.genres?.map(genre => genre.name + ' ')}</p>
       <h2>Additional Info</h2>
       <nav>
-        <NavLink to="cast" state={{ from: location.state.from }}>
+        <NavLink to="cast" state={{ from: location.state?.from ?? '/' }}>
           Cast
         </NavLink>
-        <NavLink to="reviews" state={{ from: location.state.from }}>
+        <NavLink to="reviews" state={{ from: location.state?.from ?? '/' }}>
           Reviews
         </NavLink>
       </nav>
