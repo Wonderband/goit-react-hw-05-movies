@@ -29,7 +29,7 @@ export const MovieDetails = () => {
       <br />
       <img src={movieDetails.poster_path} alt="" />
       <h1>{movieDetails.title}</h1>
-      <p>User score: {Math.round(movieDetails.vote_average * 10)}</p>
+      <p>User score: {Math.round(movieDetails.vote_average * 10)}%</p>
       <h2>Overview</h2>
       <p>{movieDetails.overview}</p>
       <h2>Genres</h2>

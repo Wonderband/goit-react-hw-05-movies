@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { Link, NavLink, useLocation, useSearchParams } from 'react-router-dom';
+import { Link, useLocation, useSearchParams } from 'react-router-dom';
 
 import { getSearchedMovies } from 'service/fetchMovies';
 
@@ -8,24 +8,36 @@ export const MoviesPage = () => {
   const location = useLocation();
   // console.log(location);
 
-  const [searchMovie, setSearchMovie] = useState('');
+  // const [searchMovie, setSearchMovie] = useState('');
   const [moviesList, setMoviesList] = useState([]);
+  const [searchParams, setSearchParams] = useSearchParams({ query: '' });
 
-  const [searchParams, setSearchParams] = useSearchParams('');
-
+  // setSearchMovie(searchParams.get('query'));
+  const qwery = searchParams.get('query');
+  console.log(qwery);
+  // if (qwe.length > 0) setSearchMovie(qwe);
+  // setSearchMovie(qwe);
   const handleSubmit = e => {
     e.preventDefault();
-    setSearchMovie(e.currentTarget.input.value);
+    // setSearchMovie(e.currentTarget.input.value);
     setSearchParams({ query: e.currentTarget.input.value });
   };
 
+  // useEffect(() => {
+  //   if (searchMovie === '') return;
+  //   // changeUrlParams();
+  //   getSearchedMovies(searchMovie)
+  //     .then(res => setMoviesList(res))
+  //     .catch(err => console.log(err));
+  // }, [searchMovie]);
+
   useEffect(() => {
-    if (searchMovie === '') return;
+    if (!qwery) return;
     // changeUrlParams();
-    getSearchedMovies(searchMovie)
+    getSearchedMovies(qwery)
       .then(res => setMoviesList(res))
       .catch(err => console.log(err));
-  }, [searchMovie, searchParams]);
+  }, [qwery]);
 
   return (
     <>
@@ -34,12 +46,12 @@ export const MoviesPage = () => {
         <input type="text" name="input" />
         <button type="submit">Search</button>
       </form>
-      <NavLink to="666" state={{ from: location }}>
+      {/* <NavLink to="666" state={{ from: location }}>
         details
-      </NavLink>
-      {console.log(moviesList)}
+      </NavLink> */}
+      {/* {console.log(moviesList)}
       {console.log(searchMovie)}
-      {console.log(searchParams.query)}
+      {console.log(searchParams.query)} */}
       <ul>
         {moviesList.map(movie => (
           <li key={movie.id}>

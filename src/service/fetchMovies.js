@@ -38,3 +38,25 @@ export  async function getSearchedMovies(query) {
         throw new Error(error.message);
     }
 }
+
+export  async function getMovieCast(movieId) {
+    try {
+        const responce = await axios.get(BASE_URL + '/movie/' + movieId + '/credits', { params: { api_key: API_KEY }, }); 
+        console.log(responce);
+        return responce.data.cast;
+    }
+    catch (error) { 
+        throw new Error(error.message);
+    }
+}
+
+export  async function getMovieReview(movieId) {
+    try {
+        const responce = await axios.get(BASE_URL + '/movie/' + movieId + '/reviews', { params: { api_key: API_KEY }, }); 
+        console.log(responce);
+        return responce.data.results;
+    }
+    catch (error) { 
+        throw new Error(error.message);
+    }
+}
