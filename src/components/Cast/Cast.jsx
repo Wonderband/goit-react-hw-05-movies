@@ -20,7 +20,10 @@ export const Cast = () => {
         {movieCast &&
           movieCast.map(person => (
             <li key={person.id}>
-              <img src="person.profile_path" alt="" />
+              <img
+                src={'https://image.tmdb.org/t/p/w500/' + person.profile_path}
+                alt=""
+              />
               <p>{person.name}</p>
               <p>Character: {person.character}</p>
             </li>

@@ -27,7 +27,10 @@ export const MovieDetails = () => {
       <h1>Movie Details</h1>
       <Link to={location.state.from}>Back to movies</Link>
       <br />
-      <img src={movieDetails.poster_path} alt="" />
+      <img
+        src={'https://image.tmdb.org/t/p/w500/' + movieDetails.poster_path}
+        alt=""
+      />
       <h1>{movieDetails.title}</h1>
       <p>User score: {Math.round(movieDetails.vote_average * 10)}%</p>
       <h2>Overview</h2>
