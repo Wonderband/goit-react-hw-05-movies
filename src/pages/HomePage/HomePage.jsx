@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { getTrendingMovies } from '../../service/fetchMovies';
 
-export const HomePage = () => {
+export default function HomePage() {
   const location = useLocation();
   const [movies, setMovies] = useState([]);
 
@@ -27,4 +27,4 @@ export const HomePage = () => {
       </ul>
     </>
   );
-};
+}

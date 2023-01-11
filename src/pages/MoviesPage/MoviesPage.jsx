@@ -4,7 +4,7 @@ import { Link, useLocation, useSearchParams } from 'react-router-dom';
 
 import { getSearchedMovies } from 'service/fetchMovies';
 
-export const MoviesPage = () => {
+export default function MoviesPage() {
   const location = useLocation();
   // console.log(location);
 
@@ -63,4 +63,4 @@ export const MoviesPage = () => {
       </ul>
     </>
   );
-};
+}
