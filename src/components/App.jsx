@@ -25,7 +25,6 @@ export const App = () => {
           <Route path="reviews" element={<Reviews />} />
         </Route>
         <Route path="*" element={<Page404 />} />
-        {/* <Route path="/products" element={<MovieDetails />} /> */}
       </Routes>
     </div>
   );
