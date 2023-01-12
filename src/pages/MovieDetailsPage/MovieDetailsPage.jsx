@@ -22,21 +22,30 @@ export default function MovieDetailsPage() {
       .catch(err => console.log(err));
   }, [movieId]);
   return (
-    <>
+    <div className={css.container}>
       <h1>Movie Details</h1>
-      <Link to={location.state?.from ?? '/movies'}>Back to movies</Link>
+      <Link to={location.state?.from ?? '/movies'} className={css.buttonBack}>
+        {'<'}-- Back to movies
+      </Link>
       <br />
-      <img
-        src={'https://image.tmdb.org/t/p/w500/' + movieDetails.poster_path}
-        alt=""
-      />
-      <h1>{movieDetails.title}</h1>
-      <p>User score: {Math.round(movieDetails.vote_average * 10)}%</p>
-      <h2>Overview</h2>
-      <p>{movieDetails.overview}</p>
-      <h2>Genres</h2>
-      <p>{movieDetails.genres?.map(genre => genre.name + ' ')}</p>
-      <h2>Additional Info</h2>
+      <section className={css.info}>
+        <img
+          src={'https://image.tmdb.org/t/p/w500/' + movieDetails.poster_path}
+          alt="poster"
+          className={css.poster}
+        />
+        <div className={css.mainInfo}>
+          <h2>
+            {movieDetails.title} ({movieDetails.release_date?.slice(0, 4)})
+          </h2>
+          <p>User score: {Math.round(movieDetails.vote_average * 10)}%</p>
+          <h3>Overview</h3>
+          <p>{movieDetails.overview}</p>
+          <h3>Genres</h3>
+          <p>{movieDetails.genres?.map(genre => genre.name + ' ')}</p>
+        </div>
+      </section>
+      <h3 className={css.addInfo}>Additional Info</h3>
       <nav className={css.detailsNav}>
         <NavLink to="cast" state={{ from: location.state?.from ?? '/movies' }}>
           Cast
@@ -49,6 +58,6 @@ export default function MovieDetailsPage() {
         </NavLink>
       </nav>
       <Outlet />
-    </>
+    </div>
   );
 }

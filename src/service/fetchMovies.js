@@ -18,8 +18,7 @@ export  async function getTrendingMovies() {
 
 export  async function getMovieDetails(movieId) {
     try {
-        const responce = await axios.get(BASE_URL + '/movie/' + movieId, { params: { api_key: API_KEY }, }); 
-        // console.log(responce);
+        const responce = await axios.get(BASE_URL + '/movie/' + movieId, { params: { api_key: API_KEY }, });        
         return responce.data;
     }
     catch (error) { 

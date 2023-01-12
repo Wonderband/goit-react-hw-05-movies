@@ -1,6 +1,9 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+
+import './HomePage.module.css';
+
 import { getTrendingMovies } from '../../service/fetchMovies';
 
 export default function HomePage() {

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation, useSearchParams } from 'react-router-dom';
 
+import './MoviesPage.module.css';
 import { getSearchedMovies } from 'service/fetchMovies';
 
 export default function MoviesPage() {
@@ -24,7 +25,7 @@ export default function MoviesPage() {
 
   return (
     <>
-      <h2>MoviesPage</h2>
+      <h1>MoviesPage</h1>
       <form onSubmit={handleSubmit}>
         <input type="text" name="input" />
         <button type="submit">Search</button>

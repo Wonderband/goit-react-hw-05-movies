@@ -14,12 +14,13 @@ code {
     monospace;
 }
 
-nav {  
+.mainNav {  
   margin: 0;
   padding: 20px;
   display: flex;
   gap: 20px;
   border: 1px solid black;
+  font-size: large;
 }
 
 .active{
@@ -27,9 +28,7 @@ nav {
   color:brown;
 }
 
-a {
-  text-decoration: none;
-}
+
 
 li {
   list-style: none;

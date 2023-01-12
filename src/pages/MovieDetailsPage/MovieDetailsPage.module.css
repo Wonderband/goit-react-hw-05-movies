@@ -1,4 +1,47 @@
- .active {
+.buttonBack {
+    display: inline-block;
+    text-decoration: none;
+    background-color: bisque;
+    padding: 10px;
+    margin: 0 20px 20px;
+    border: 1px solid black;
+    border-radius: 5%;
+}
+
+.poster {
+    width: 300px
+}
+
+.info {
+    display: flex;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    
+}
+
+.mainInfo {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.addInfo {
+    padding-left: 20px;
+}
+
+.detailsNav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+
+ 
+ /* .active {
     font-weight: bold;
     color: red;
-}
+} */

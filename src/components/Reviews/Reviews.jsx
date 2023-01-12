@@ -21,7 +21,7 @@ export const Reviews = () => {
           ? movieReview.map(rew => {
               return (
                 <li key={rew.id}>
-                  Author: {rew.author}
+                  <em>Author:</em> <b>{rew.author}</b>
                   <p>{rew.content}</p>
                 </li>
               );
