@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/42.33cc0907.chunk.css","mappings":"AAAC,gCAEG,SAAU,CADV,eAEJ","sources":["pages/MovieDetailsPage/MovieDetailsPage.module.css"],"sourcesContent":[" .active {\n    font-weight: bold;\n    color: red;\n}"],"names":[],"sourceRoot":""}
