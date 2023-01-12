@@ -29,11 +29,13 @@ export default function MovieDetailsPage() {
       </Link>
       <br />
       <section className={css.info}>
-        <img
-          src={'https://image.tmdb.org/t/p/w500/' + movieDetails.poster_path}
-          alt="poster"
-          className={css.poster}
-        />
+        {movieDetails.poster_path && (
+          <img
+            src={'https://image.tmdb.org/t/p/w500/' + movieDetails.poster_path}
+            alt="poster"
+            className={css.poster}
+          />
+        )}
         <div className={css.mainInfo}>
           <h2>
             {movieDetails.title} ({movieDetails.release_date?.slice(0, 4)})
